@@ -2,6 +2,7 @@
   grid-template-columns: 20% 80%;
   display: grid;
   --prim-color: rgba(0, 255, 191, 0.308);
+  --card-color: rgba(229, 255, 0, 0.514);
   color: azure;
   margin: auto;
 }
@@ -17,4 +18,11 @@ button {
 button:hover {
   transition: all 0.5s;
   background: blanchedalmond;
+}
+.page-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  grid-column: 2px;
 }
