@@ -6,7 +6,7 @@ import Login from "./Views/login/login";
 
 function App() {
   const { auth } = useSelector((state) => state);
-  return <>{!auth.Loggedin ? <Login /> : <h1>hello</h1>}</>;
+  return <>{!auth.Loggedin ? <Login /> : <></>}</>;
 }
 
 export default App;

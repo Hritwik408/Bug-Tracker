@@ -1,7 +1,9 @@
-html {
-  margin-left: 20vw;
+#root {
+  grid-template-columns: 20% 80%;
+  display: grid;
   --prim-color: rgba(0, 255, 191, 0.308);
   color: azure;
+  margin: auto;
 }
 button {
   background: cornsilk grey;
