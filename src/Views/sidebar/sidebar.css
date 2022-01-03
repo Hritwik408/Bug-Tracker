@@ -1,0 +1,7 @@
+.sidebar-wrapper {
+  background-color: $prim-color;
+  border-right: 1px solid white;
+  width: 10em;
+  height: 100vh;
+  color: white;
+}
