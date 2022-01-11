@@ -1,5 +1,6 @@
 import React from "react";
 import "./bugcard.css";
+import priorityController from "../../Controllers/prioritycontoller";
 
 export default (props) => {
   const { name, priority, version } = props.bug;

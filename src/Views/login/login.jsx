@@ -22,6 +22,7 @@ export default () => {
   function submit(e) {
     dispatch(signIn(formInput));
     e.preventDefault();
+    window.addEventListener("unload", function () {});
   }
 
   return (
@@ -41,7 +42,7 @@ export default () => {
           onChange={inputchanged}
           value={formInput.password}
         ></input>
-        <button type="submit" onclick={submit}>
+        <button type="submit" onClick={submit}>
           login
         </button>
       </form>

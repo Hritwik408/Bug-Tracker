@@ -1,10 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
 
-class SiderBar extends Component {
-  state = {};
-  render() {
-    return <div className="sidebar-wrapper">"side bar"</div>;
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "../../Controllers/Redux/authslice";
+
+export default () => {
+  const dispatch = useDispatch();
+  const { auth } = useSelector((state) => state);
+
+  function SignOut() {
+    dispatch(signOut());
   }
-}
-
-export default SiderBar;
+  return (
+    <div className="sidebars">
+      <link className="nav-link" to="/">
+        <h1 className="brand">Bug-Tracker</h1>
+      </link>
+      <ul>
+        <li>
+          <link to="/" className="nav-link">
+            Dashboard
+          </link>
+        </li>
+        <li>
+          <link to="/viewbugs" className="nav-link">
+            View Bugs
+          </link>
+        </li>
+        {auth.admin && (
+          <li>
+            <link to="/create" className="nav-link">
+              Create Bug
+            </link>
+          </li>
+        )}
+      </ul>
+      <button classname="nav-link logout" onclick={SignOut}>
+        Logout
+      </button>
+    </div>
+  );
+};
